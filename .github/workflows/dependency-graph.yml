@@ -17,6 +17,17 @@ jobs:
     name: Update Dependency Graph
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - uses: sbt/setup-sbt@v1
-      - uses: scalacenter/sbt-dependency-submission@v2
+      
+      - name: Checkout my fork of sbt-dependency-submission
+        uses: actions/checkout@v4
+        with:
+          repository: dancewithheart/sbt-dependency-submission
+          ref: fix-191-log-response
+          path: .github/actions/sbt-dependency-submission
+      
+      - name: Sbt Dependency Submission
+        uses: ./.github/actions/sbt-dependency-submission
