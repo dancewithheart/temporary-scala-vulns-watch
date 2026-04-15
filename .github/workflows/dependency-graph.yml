@@ -2,7 +2,7 @@
 name: Update Dependency Graph
 on:
   push:
-    branches: [main , master] # default branch of the project
+    branches: [main] # default branch of the project
 
 concurrency: 
   # Only run once for latest commit per ref and cancel other (previous) runs.
