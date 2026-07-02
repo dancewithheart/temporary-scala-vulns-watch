@@ -1,4 +1,4 @@
-val zioVersion = "2.1.25"
+val zioVersion = "2.1.26"
 
 ThisBuild / name := "temp-scala-security-vulns-watcher"
 ThisBuild / organization := "rorschach"
@@ -10,15 +10,15 @@ lazy val root = project
   .settings(
     libraryDependencies ++= Seq(
       "dev.zio" %% "zio"               % zioVersion,
-      "dev.zio" %% "zio-http"          % "3.10.1",
+      "dev.zio" %% "zio-http"          % "3.11.3",
       "io.getquill" %% "quill-zio"     % "4.8.6",
       "dev.zio" %% "zio-s3"            % "0.4.4",
 //      "dev.zio" %% "zio-aws-core" % "7.42.33.1",
       "dev.zio" %% "zio-redis" % "1.2.1",
       "dev.zio" %% "zio-rocksdb" % "0.4.4",
-      "dev.zio" %% "zio-dynamodb" % "1.0.0-RC24",
-      "dev.zio" %% "zio-kafka" % "3.3.0",
-      "dev.zio" %% "zio-json" % "0.9.1",
+      "dev.zio" %% "zio-dynamodb" % "1.0.0-RC25",
+      "dev.zio" %% "zio-kafka" % "3.6.0",
+      "dev.zio" %% "zio-json" % "0.9.2",
       "dev.zio" %% "zio-ftp" % "0.5.3",
       "dev.zio" %% "zio-test"          % zioVersion % Test,
       "dev.zio" %% "zio-test-sbt"      % zioVersion % Test,
